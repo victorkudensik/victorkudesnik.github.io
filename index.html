@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<ul>
+			<li class='list active' data-filter="all">Все товары</li>
+			<li class='list' data-filter="videocard">Видео Карты</li>
+			<li class='list' data-filter="cpu">Процессоры</li>
+			<li class='list' data-filter="motherboard">Материнские Платы</li>
+			<li class='list' data-filter="monitors">Мониторы</li>
+			<li class='list' data-filter="ozu">Озу</li>
+			<li class='list' data-filter="headphone">Наушники</li>
+		</ul>
+		<div class="product">
+			<div class="itemBox videocard"><img src="img/videocard1.jpg"></div>
+			<div class="itemBox cpu"><img src="img/cpu2.jpg"></div>
+			<div class="itemBox motherboard"><img src="img/motherboard1.jpg"></div>
+			<div class="itemBox monitors"><img src="img/monitor1.jpg"></div>
+			<div class="itemBox ozu"><img src="img/ozu1.jpg"></div>
+			<div class="itemBox headphone"><img src="img/headphone3.jpg"></div>
+		</div>
+	</section>
+
+	<script
+  		src="https://code.jquery.com/jquery-3.5.1.js"
+  		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  		crossorigin="anonymous"> 
+ 	</script>
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			$('.list').click(function(){
+ 				const value = $(this).attr('data-filter');
+ 				if(value == 'all'){
+ 					$('.itemBox').show('1000');
+ 				}
+ 				else{
+ 					$('.itemBox').not('.'+value).hide('1000');
+ 					$('.itemBox').filter('.'+value).show('1000');
+ 				}
+ 			})
+ 			// add active class on selected item
+ 			$('.list').click(function(){
+ 				$(this).addClass('active').siblings().removeClass('active');
+ 			})
+ 		})
+ 	</script>
+</body>
+</html>
+
