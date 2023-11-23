@@ -12,13 +12,61 @@
 
     
     <header>
-        <div class="topmenu">
-            <div class="logo"><h1>logo</h1></div>
-            <div class="search-container">
-                <input type="text" placeholder="Искать">
+        <div class="mainWrap">
+            <div class="topmenu">
+            <div class="search-container"  id="search_hide">
+                <input type="text" placeholder="Поиск">
                 <button type="submit">Найти</button>
             </div>
-        </div>
+            </div>
+
+            <a id="touch-menu" class="mobile-menu" href="#">
+            <i class="icon-reorder"></i>Меню</a>
+            <nav>
+                <ul class="menu"  id="menu_hide">
+                    <li>
+                        <a href="#"><i class="icon-home"></i>Главная</a>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="icon-user"></i>Настройка роутера</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Подменю 1</a></li>
+                            <li><a href="#">Подменю 2</a></li>
+                            <li><a href="#">Подменю 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="icon-camera"></i>Интернет и сеть</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Подменю 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Уровень 3 меню</a>
+                                <ul>
+                                    <li><a href="#">Подменю 4</a></li>
+                                    <li><a href="#">Подменю 5</a></li>
+                                    <li><a href="#">Подменю 6</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="icon-bullhorn"></i>Smart TV</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Подменю 1</a></li>
+                            <li><a href="#">Подменю 2</a></li>
+                            <li><a href="#">Подменю 3</a></li>
+                        </ul>
+                    </li>
+                            <li>
+                                <a  href="#" class="advice"><i class="icon-envelope-alt"></i>Cоветы</a>
+                            </li>
+                        </ul>
+            </nav>
+
+        </div><!--end mainWrap-->
+
         <section class="bg">
             <h2 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing .</h2>
             <span class="skewedOne"></span>
@@ -27,9 +75,10 @@
 
 
         <div class="mainWrap">
-            <a id="touch-menu" class="mobile-menu" href="#">
-            <i class="icon-reorder"></i>Меню</a>
-
+            <div class="search-container">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">Найти</button>
+            </div>
         <nav>
         <ul class="menu">
             <li>
