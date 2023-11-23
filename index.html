@@ -10,20 +10,16 @@
 </head>
 <body>
 
-    
     <header>
-        <div class="mainWrap">
+        <div class="mainWrap"> 
             <div class="topmenu">
-            <div class="search-container"  id="search_hide">
-                <input type="text" placeholder="Поиск">
-                <button type="submit">Найти</button>
-            </div>
-            </div>
-
-            <a id="touch-menu" class="mobile-menu" href="#">
-            <i class="icon-reorder"></i>Меню</a>
-            <nav>
-                <ul class="menu"  id="menu_hide">
+                <button class="header__burger-btn" id="touch-menu" href="#">
+                    <span></span><span></span><span></span>
+                </button>
+                <a id="touch-menu" class="mobile-menu" href="#">
+                <i class="icon-reorder"></i>Меню</a>
+            <nav class="menu">
+                <ul class="menu-list">
                     <li>
                         <a href="#"><i class="icon-home"></i>Главная</a>
                     </li>
@@ -64,8 +60,17 @@
                             </li>
                         </ul>
             </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">Найти</button>
+            </div>
+            </div>
+            
 
         </div><!--end mainWrap-->
+
+            
+
 
         <section class="bg">
             <h2 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing .</h2>
@@ -74,55 +79,7 @@
         </section>
 
 
-        <div class="mainWrap">
-            <div class="search-container">
-                <input type="text" placeholder="Поиск">
-                <button type="submit">Найти</button>
-            </div>
-        <nav>
-        <ul class="menu">
-            <li>
-                <a href="#"><i class="icon-home"></i>Главная</a>
-            </li>
-            <li>
-                <a  href="#"><i class="icon-user"></i>Настройка роутера</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Подменю 1</a></li>
-                    <li><a href="#">Подменю 2</a></li>
-                    <li><a href="#">Подменю 3</a></li>
-                </ul>
-            </li>
-            <li>
-                <a  href="#"><i class="icon-camera"></i>Интернет и сеть</a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="#">Подменю 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Уровень 3 меню</a>
-                        <ul>
-                            <li><a href="#">Подменю 4</a></li>
-                            <li><a href="#">Подменю 5</a></li>
-                            <li><a href="#">Подменю 6</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a  href="#"><i class="icon-bullhorn"></i>Smart TV</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Подменю 1</a></li>
-                    <li><a href="#">Подменю 2</a></li>
-                    <li><a href="#">Подменю 3</a></li>
-                </ul>
-            </li>
-                    <li>
-                        <a  href="#" class="advice"><i class="icon-envelope-alt"></i>Cоветы</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div><!--end mainWrap-->
+        
 
 
     </header>
