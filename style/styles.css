@@ -675,10 +675,8 @@ footer {
 
     .header__burger-btn{
         display: block;
-        overflow: hidden;
-        z-index: 2;
-
     }
+
 
     .menu{
         position: fixed;

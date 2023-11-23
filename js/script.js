@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var touchMenu = document.getElementById("touch-menu");
-  var mainMenu = document.querySelector(".menu");
+  var mainMenu = document.querySelector(".menu-list");
 
   touchMenu.addEventListener("click", function(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  var subMenuLinks = document.querySelectorAll(".menu li > a");
+  var subMenuLinks = document.querySelectorAll(".menu-list li > a");
   subMenuLinks.forEach(function(link) {
     link.addEventListener("click", function(e) {
       e.preventDefault();
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  var subMenuLinksLevel3 = document.querySelectorAll(".menu li ul li a");
+  var subMenuLinksLevel3 = document.querySelectorAll(".menu-list li ul li a");
   subMenuLinksLevel3.forEach(function(link) {
     link.addEventListener("click", function(e) {
       e.preventDefault();
