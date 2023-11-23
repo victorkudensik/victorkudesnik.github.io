@@ -740,18 +740,15 @@ footer {
     }
 
     .search-container input{
-        width: 300px;
+        width: 290px;
         padding: 8px;
+        margin-right: 5px;
         border-radius: 5px;
         border: 1px solid #9CA3DA;
     }
 
     .search-container button {
         padding: 9px 14px;
-    }
-
-    .topmenu .search-container input{
-        width: 150px;
     }
 
     .container{
