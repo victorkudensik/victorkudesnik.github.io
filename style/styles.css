@@ -651,14 +651,12 @@ footer {
 
 @media (max-width: 760px) {
     .bg{
-        height: 90vh
+        height: 100vh
     }
 
     .topmenu{
         display: none;
     }
-
-    
 
     .mainWrap{
         width:100%;
