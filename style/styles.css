@@ -696,6 +696,7 @@ footer {
         color:#797979;
         border-top:1px solid #e0e0e0;
         border-left:3px solid #ffffff;
+        font-size: 14px;
     }
 
     .menu li a:hover, .menu li:hover > a{
