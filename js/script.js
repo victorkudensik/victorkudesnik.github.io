@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   var touchMenu = document.getElementById("touch-menu");
   var mainMenu = document.querySelector(".menu-list");
+  var burgerLines = document.querySelectorAll(".line");
+
+  touchMenu.addEventListener("click", function (e) {
+    e.preventDefault();
+    mainMenu.classList.toggle("show-menu");
+    burgerLines.forEach(function (line) {
+      line.classList.toggle("change");
+    });
+  });
 
   touchMenu.addEventListener("click", function(e) {
     e.preventDefault();
