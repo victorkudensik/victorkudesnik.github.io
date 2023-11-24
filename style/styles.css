@@ -30,9 +30,9 @@ body{
 }
 
 .header__burger-btn{
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
 }
 
 .line {
@@ -200,6 +200,21 @@ form:hover .fa{
     background: #07051a;
     color: white;
 }
+
+.expanded {
+  width: 200px !important; /* Убедитесь, что ваши стили здесь переопределяют стили :hover */
+  cursor: pointer;
+}
+
+.expanded input {
+  display: block;
+}
+
+.expanded .fa {
+  background: #07051a;
+  color: white;
+}
+
 
 .logo{
     position: absolute;

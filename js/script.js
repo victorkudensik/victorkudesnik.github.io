@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
   var touchMenu = document.getElementById("touch-menu");
   var mainMenu = document.querySelector(".menu-list");
   var burgerLines = document.querySelectorAll(".line");
+  var form = document.querySelector('form');
+
+  form.addEventListener('click', function () {
+    form.classList.toggle('expanded');
+  });
 
   touchMenu.addEventListener("click", function (e) {
     e.preventDefault();
