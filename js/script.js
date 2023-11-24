@@ -4,8 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
   var burgerLines = document.querySelectorAll(".line");
   var form = document.querySelector('form');
 
-  form.addEventListener('click', function () {
+  form.addEventListener('click', function (e) {
+    e.stopPropagation(); // Предотвращение всплытия события
     form.classList.toggle('expanded');
+  });
+
+  // Обработчик клика на документе
+  document.addEventListener('click', function (e) {
+    // Проверяем, что клик был не по форме и форма расширена
+    if (!form.contains(e.target) && form.classList.contains('expanded')) {
+      form.classList.remove('expanded'); // Скрываем форму
+    }
   });
 
   touchMenu.addEventListener("click", function (e) {
