@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // Добавляем проверку наличия класса 'expanded' для формы при ее клике
+  form.addEventListener('click', function (e) {
+    if (form.classList.contains('expanded')) {
+      form.classList.remove('expanded'); // Скрываем форму
+    }
+  });
+
   touchMenu.addEventListener("click", function (e) {
     e.preventDefault();
     mainMenu.classList.toggle("show-menu");
