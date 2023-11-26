@@ -576,7 +576,6 @@ h6 {
 
 
 .main-content .info .left div {
-    width: 50%;
     float: left;
     padding-left: 10%;
 }
@@ -585,7 +584,7 @@ h6 {
 .main-content .info .left div img {
     display: inline-block;
     position: relative;
-    top: 1px;
+    top: -3px;
     margin-right: 10px;
 }
 
@@ -685,6 +684,11 @@ div {
 
 .pagin{
   margin-top: 20px;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #443745;
+    border-color: #353345;
 }
 
 
@@ -822,6 +826,8 @@ aside .title_ {
 }
 
 
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -915,7 +921,6 @@ aside .title_ {
     line-height: 24px;
   }
 }
-
 
 
 
@@ -1195,7 +1200,5 @@ aside .title_ {
     aside .title_{
         max-width: 100%;
     }
-
-
 
 }
