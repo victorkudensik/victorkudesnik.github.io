@@ -79,6 +79,7 @@
     })
   }
 
+
   /**
    * Header fixed top on scroll
    */
@@ -259,3 +260,16 @@
   new PureCounter();
 
 })()
+
+document.addEventListener("DOMContentLoaded", function() {
+  const textElements = document.querySelectorAll(".fly-in-text");
+  const buttonElement = document.querySelector(".fly-in-button");
+
+  // Показываем текстовые элементы с анимацией
+  textElements.forEach(function(textElement) {
+    textElement.classList.add("show");
+  });
+
+  // Показываем кнопку с анимацией
+  buttonElement.classList.add("show");
+});
