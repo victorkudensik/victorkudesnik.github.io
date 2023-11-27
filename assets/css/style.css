@@ -151,6 +151,7 @@ h6 {
   margin-top: 70px;
 }
 
+
 @media (max-width: 991px) {
   .scrolled-offset {
     margin-top: 60px;
@@ -453,7 +454,7 @@ h6 {
     box-sizing: border-box;
     border-radius: 25px;
     border: 4px solid white;
-    margin-right: 15px;
+    margin-left: 48px;
 }
 
 .sear input{
@@ -684,6 +685,7 @@ div {
 
 .pagin{
   margin-top: 20px;
+  margin-bottom: 20px
 }
 
 .active>.page-link, .page-link.active {
@@ -826,23 +828,21 @@ aside .title_ {
 }
 
 
-
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/1.jpg") top center;
   background-size: cover;
   position: relative;
-  margin-bottom: -70px;
+  margin-bottom: -25px;
 }
 
 @media (max-width: 992px) {
   #hero {
-    margin-bottom: -60px;
+    margin-bottom: 0px;
   }
 }
 
@@ -876,6 +876,7 @@ aside .title_ {
   line-height: 56px;
   text-transform: uppercase;
   color: #fff;
+  text-align: center;
 }
 
 #hero h2 {
@@ -1000,7 +1001,7 @@ aside .title_ {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ff7f5d;
+  background: #ed143c;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1090,6 +1091,14 @@ aside .title_ {
     .logo{
         position: relative;
     }
+
+    .d-flex {
+      display: flex!important;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+
 
     .menu{
         position: fixed;
@@ -1190,11 +1199,12 @@ aside .title_ {
 
     aside{
         display: block;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-bottom: 40px;
         max-width: 100%;
         margin-right: 10px;
         margin-left: 10px;
+        height: 931px;
     }
 
     aside .title_{
