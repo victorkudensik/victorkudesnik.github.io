@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: #ffa790;
+  color: #d987e3;
   text-decoration: none;
 }
 
@@ -140,6 +140,7 @@ h6 {
 
 #header .logo a {
   color: #fff;
+
 }
 
 #header .logo img {
@@ -242,7 +243,7 @@ h6 {
   height: 2px;
   bottom: -7px;
   left: 0;
-  background-color: #ff7f5d;
+  background-color: #d987e3;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -296,7 +297,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #ff7f5d;
+  color: #d987e3;
 }
 
 .navbar .dropdown:hover>ul {
@@ -520,7 +521,14 @@ h6 {
   transition: opacity 2s ease, transform 2s ease;
 }
 
+
 .fly-in-button {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 2s ease;
+}
+
+.additional-fly-in-text {
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 1s ease, transform 2s ease;
@@ -532,11 +540,16 @@ h6 {
   transform: translateX(0);
 }
 
+
 .fly-in-button.show {
   opacity: 1;
   transform: translateX(0);
 }
 
+.additional-fly-in-text.show {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 
 .container_ {
@@ -1060,7 +1073,7 @@ aside .title_ {
 }
 
 #footer .footer-bottom {
-  border-top: 1px solid #3b0e41;
+  border-top: 1px solid #000000;
   z-index: 2;
   position: relative;
   padding-top: 40px;

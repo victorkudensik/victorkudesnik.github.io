@@ -264,11 +264,14 @@
 document.addEventListener("DOMContentLoaded", function() {
   const textElements = document.querySelectorAll(".fly-in-text");
   const buttonElement = document.querySelector(".fly-in-button");
+  const additionalTextElement = document.querySelector(".additional-fly-in-text");
 
   // Показываем текстовые элементы с анимацией
   textElements.forEach(function(textElement) {
     textElement.classList.add("show");
   });
+
+  additionalTextElement.classList.add("show");
 
   // Показываем кнопку с анимацией
   buttonElement.classList.add("show");
