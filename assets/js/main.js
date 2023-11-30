@@ -276,3 +276,19 @@ document.addEventListener("DOMContentLoaded", function() {
   // Показываем кнопку с анимацией
   buttonElement.classList.add("show");
 });
+
+var swiper = new Swiper(".swiper", {
+  // Optional parameters
+  //direction: 'vertical',
+  loop: true,
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
