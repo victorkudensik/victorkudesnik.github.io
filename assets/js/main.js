@@ -285,10 +285,15 @@ var swiper = new Swiper(".swiper", {
   centeredSlides: true,
   spaceBetween: 30,
 
+  autoplay: {
+    delay: 3000, // Задержка между слайдами в миллисекундах (например, 3000 - 3 секунды)
+    disableOnInteraction: false, // Отключение автовоспроизведения при взаимодействии с пользователем (по умолчанию true)
+  },
+
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.btn-primary-next',
+    prevEl: '.btn-primary-prev',
   },
 
 });

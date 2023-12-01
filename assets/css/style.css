@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #444444;
 }
 
@@ -83,7 +83,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #d987e3;
+  background: rgb(21 5 23 / 51%);
   color: #fff;
 }
 
@@ -147,21 +147,10 @@ h6 {
   text-transform: uppercase
 }
 
-.mobile-show-logo-footer a{
-
-}
-
 .mobile-show-logo-color-footer{
   color: #d987e3;
 }
 
-#header .logo img {
-  max-height: 40px;
-}
-
-.scrolled-offset {
-  margin-top: 70px;
-}
 
 @media (max-width: 991px) {
   .scrolled-offset {
@@ -169,35 +158,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Header Social Links
---------------------------------------------------------------*/
-.header-social-links {
-  padding-left: 20px;
-}
-
-.header-social-links a {
-  color: rgba(255, 255, 255, 0.6);
-  margin-left: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.header-social-links a i {
-  line-height: 0;
-}
-
-.header-social-links a:hover {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .header-social-links {
-    padding: 0 15px 0 0;
-  }
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -234,7 +194,7 @@ h6 {
   justify-content: space-between;
   padding: 0 3px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
   transition: 0.3s;
   color: white;
@@ -457,7 +417,12 @@ h6 {
   display: block;
 }
 
-.sear{
+
+/**
+* Search content
+*/
+
+.search_content{
     position: relative;
     align-items: center;
     transition: all 1s;
@@ -470,12 +435,12 @@ h6 {
     margin-left: 48px;
 }
 
-.sear input{
+.search_content input{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    line-height: 30px;
+    line-height: 31px;
     outline: 0;
     border: 0;
     display: none;
@@ -484,7 +449,7 @@ h6 {
     padding: 0 10px;
 }
 
-.sear .fa{
+.search_content .fa{
     box-sizing: border-box;
     padding: 10px;
     width: 35px;
@@ -500,16 +465,16 @@ h6 {
     margin-top: -1px;
 }
 
-.sear:hover{
+.search_content:hover{
     width: 200px;
     cursor: pointer;
 }
 
-.sear:hover input{
+.search_content:hover input{
     display: block;
 }
 
-.sear:hover .fa{
+.search_content:hover .fa{
     background: #07051a;
     color: white;
 }
@@ -527,6 +492,108 @@ h6 {
     background: #07051a;
     color: black;
 }
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/1.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -25px;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    margin-bottom: 0px;
+  }
+}
+
+#hero:before {
+  content: "";
+  background: rgba(21, 5, 23, 0.5) linear-gradient(rgba(26, 0, 33, 0.5) 0%, rgba(26, 0, 33, 0.5) 5%, rgba(38, 6, 51, 0.5) 40%, rgba(147, 47, 69, 0.7) 76%, rgba(236, 97, 93, 0.7) 94%, rgba(236, 97, 93, 0.5) 100%) repeat scroll 0% 0%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+#hero h2 {
+  color: #eee;
+  margin: 15px 0 0 0;
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+    background: #d987e3;
+    border: 2px solid #d987e3;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+/**
+* Анимация текста в хиро 
+*/
 
 .fly-in-text {
   opacity: 0;
@@ -553,7 +620,6 @@ h6 {
   transform: translateX(0);
 }
 
-
 .fly-in-button.show {
   opacity: 1;
   transform: translateX(0);
@@ -564,6 +630,10 @@ h6 {
   transform: translateX(0);
 }
 
+
+/**
+* Main Container
+*/
 
 .container_ {
     background:#f4f4f4;
@@ -580,7 +650,6 @@ h6 {
     flex-wrap: wrap;
     margin: 50px;
     box-sizing: border-box; /* Учитывать padding в общей ширине блока */
-    
 }
 
 .main-content {
@@ -686,44 +755,6 @@ img {
 }
 
 
-.swiper {
-    width: 100%;
-}
-
-.swiper-slide {
-      text-align: center;
-      font-size: 10px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-}
-
-.swiper-slide img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-}
-
-.swiper-slide a{
-    color: black;
-    font-size: 13px;
-}
-
-
-.swiper-slide-box{
-  width: 100%;
-  background: #fff;
-  border-radius: 0.375rem;
-  padding: 10px 30px 10px 30px;
-}
-
-.title-swipe{
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-
 .main-content .info .right .more:hover{
     background-color: rgb(21 5 23);
 }
@@ -734,10 +765,6 @@ img {
     margin-bottom: 5px;
     line-height: 1.2em;
     font-weight: normal !important;
-}
-
-div {
-    display: block;
 }
 
 
@@ -770,27 +797,82 @@ div {
     margin-inline-end: 0px;
 }
 
+
+/**
+* Swiper
+*/
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+      font-size: 10px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.swiper-slide a{
+    color: black;
+    font-size: 18px;
+}
+
+.swiper-slide p{
+  text-align: left;
+}
+
+.swiper-slide-box{
+    width: 100%;
+    background: #fff;
+    border-radius: 0.375rem;
+    padding: 20px 30px 20px 30px;
+}
+
+.title-swipe{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+
+}
+
+.btn-primary{
+  background: #d7d7d763;
+  border: 1px solid #44374563;
+  border-radius: 0.375rem;
+}
+
+.btn-primary:hover{
+  background: #44374564;
+  border: 1px solid #443745c7;
+}
+
+
+
+
+/**
+* Pagination
+*/
+
 .pagin{
   margin-top: 20px;
   margin-bottom: 20px
 }
 
+
 .active>.page-link, .page-link.active {
     background-color: #443745;
     border-color: #353345;
 }
-
-
-h1 {
-    color: #474747;
-    font-size: 25px;
-    font-weight: normal;
-    margin: 13px 0;
-    line-height: 1.23em;
-    font-family: 'pt_sansbold';
-    text-align: left;
-}
-
 
 
 p {
@@ -801,6 +883,9 @@ p {
     margin-inline-end: 0px;
 }
 
+/**
+* View
+*/
 
 .aligncenter {
     position: relative;
@@ -812,17 +897,22 @@ p {
     clear: both;
 }
 
+
 @media screen and (max-width: 1230px)
 .aligncenter {
     max-width: 90%;
     height: auto;
 }
 
-article .info .soc {
+article{
+  padding: 20px;
+}
+
+article .info_view .soc {
     float: left;
 }
 
-article .info .right {
+article .info_view .right {
     float: right;
     color: #474747;
     font-family: 'pt_sans_narrowregular';
@@ -830,48 +920,14 @@ article .info .right {
     top: 6px;
 }
 
-.other_article {
-    width: 100%;
-    float: left;
-}
-
-.other_article .title {
-    color: #474747;
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-family: 'pt_sansbold';
-    margin-top: 100px;
+.main-content .info_view{
+  padding: 10px;
 }
 
 
-@media screen and (max-width: 1230px)
-.other_article .parent {
-    margin: 0 -2.5% 25px;
-}
-
-.other_article .parent {
-    width: 104%;
-    float: left;
-    margin: 0 -2% 25px;
-}
-
-@media screen and (max-width: 1230px)
-.other_article .parent section {
-    width: 20.5%;
-}
-
-.other_article .parent section {
-    width: 21%;
-    float: left;
-    margin: 0 2%;
-    line-height: 0.9em;
-}
-
-.other_article .parent section a {
-    font-size: 13px;
-    color: #474747;
-}
-
+/**
+* Aside
+*/
 
 aside {
     margin-top: 50px;
@@ -898,11 +954,13 @@ aside .title_ {
     border-radius: 0.375rem 0.375rem 0 0;
 }
 
+/**
+* Article list
+*/
+
 .article_list{
     margin: 20px;
 }
-
-
 
 .article_list a{
     color: #817F7F;
@@ -912,102 +970,6 @@ aside .title_ {
 
 .article_list a:hover{
     color: #9CA3DA;
-}
-
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 100vh;
-  background: url("../img/1.jpg") top center;
-  background-size: cover;
-  position: relative;
-  margin-bottom: -25px;
-}
-
-@media (max-width: 992px) {
-  #hero {
-    margin-bottom: 0px;
-  }
-}
-
-#hero:before {
-  content: "";
-  background: rgba(21, 5, 23, 0.5) linear-gradient(rgba(26, 0, 33, 0.5) 0%, rgba(26, 0, 33, 0.5) 5%, rgba(38, 6, 51, 0.5) 40%, rgba(147, 47, 69, 0.7) 76%, rgba(236, 97, 93, 0.7) 94%, rgba(236, 97, 93, 0.5) 100%) repeat scroll 0% 0%;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 15px;
-  right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-#hero h1 {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-}
-
-#hero h2 {
-  color: #eee;
-  margin: 15px 0 0 0;
-  font-size: 24px;
-}
-
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  margin-top: 30px;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-#hero .btn-get-started:hover {
-    background: #d987e3;
-    border: 2px solid #d987e3;
-}
-
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 20px;
-    line-height: 36px;
-    text-align: center;
-  }
-
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
 }
 
 
@@ -1158,31 +1120,9 @@ aside .title_ {
 
 @media (max-width: 760px) {
 
-    .header__burger-btn {
-        display: flex;
-        margin-left: 5px;
-    }
-
-    .mainWrap{
-        display: block;
-        position: fixed;
-        overflow: hidden;
-        z-index: 2;
-        width: 100%;
-    }
-
-    .topmenu{
-        justify-content: space-between;
-    }
-
     #header .logo{
         margin-bottom: 6px;
         display: none;
-
-    }
-
-    .sear{
-      margin-left: 36px;
     }
 
     #header .logo a {
@@ -1216,63 +1156,6 @@ aside .title_ {
       justify-content: space-between;
     }
 
-    .menu{
-        position: fixed;
-        width: 100%;
-        left: 0;
-        top: 0;
-        margin-top: 45px;
-    }
-
-    .menu-list{
-        display: none;
-    }
-
-    .menu-list li{
-        display: block;
-        margin: 0;
-    }
-
-    .menu-list li a{
-        background: #3e4156;
-        color: #ffffff;
-        font-size: 14px;
-    }
-
-    .menu-list {
-        display: none;
-    }
-
-    .menu-list ul {
-        display:block;
-        position:relative;
-        top:0px;
-        left:0;
-        width:100%;
-    }
-
-    .menu-list ul li a {
-        color: #ffffff; 
-        background: #3e4156;
-        border-left: 3px solid #3e4156;
-    }
-
-    .menu-list ul li {
-        background: #3e4156;
-    }
-
-    .menu-list ul{
-        display: none;
-    }
-
-    .menu-list ul ul {
-        display: none;
-    }
-
-    .menu-list ul ul {
-        left:0;
-        margin-top: 10px;
-    }
     form{
         margin-right: 5px;
     }
@@ -1284,7 +1167,6 @@ aside .title_ {
     .main-container{
         margin: 0px;
         margin-top: 10px;
-    
     }
 
     .main-content{
@@ -1319,6 +1201,11 @@ aside .title_ {
         margin-right: 6px;
     }
 
+    .aligncenter {
+        max-width: 100%;
+        height: auto;
+    }
+
     aside{
         display: block;
         margin-top: 15px;
@@ -1329,6 +1216,32 @@ aside .title_ {
 
     aside .title_{
         max-width: 100%;
+    }
+
+    .swiper-slide-box{
+      width: 410px;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      display: none;
+    }
+
+    .swiper-slide a {
+      color: black;
+      font-size: 15px;
+    }
+
+    .swiper-slide p{
+      text-align: left;
+    }
+
+    .swiper-slide img {
+      height: 120px;
+    }
+
+    .title-swipe h3{
+      font-size: 20px;
     }
 
 }
