@@ -1208,7 +1208,7 @@ aside .title_ {
 
     aside{
         display: block;
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 20px;
         max-width: 100%;
         height: 979px;
@@ -1221,6 +1221,7 @@ aside .title_ {
     .swiper-slide-box{
       width: 410px;
       margin-top: 20px;
+      padding: 20px 5px 20px 5px;
     }
 
     .btn-primary {
