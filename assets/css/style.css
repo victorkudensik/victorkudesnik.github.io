@@ -1252,10 +1252,23 @@ aside .title_ {
 
 @media (max-width: 760px) {
 
+    #header.fixed-top {
+      height: 130px;
+    }
+
     #header .logo{
-        margin-bottom: 6px;
+        position: absolute;
+        top: 15px;
+        left: 22px;
         text-transform: uppercase;
         display: block;
+    }
+
+    .mobile-nav-toggle {
+      display: block;
+      position: absolute;
+      top: -49px;
+      left: 325px;
     }
 
     #hero h1{
@@ -1310,11 +1323,11 @@ aside .title_ {
 
     .d1{
       display: block;
-      position: fixed;
+      position: absolute;
       display: block;
-      width: 100%;
-      top: 58px;
-      left: 0px;
+      width: 90%;
+      top: 63px;
+      left: 21px;
       border: 1px solid black;
     }
 
