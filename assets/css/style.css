@@ -136,6 +136,10 @@ h6 {
   color: #a087f9;
 }
 
+.btn-get-started{
+  display: none;
+}
+
 
 .mobile-show-logo{
   display: none;
@@ -421,11 +425,71 @@ h6 {
 /**
 * Search content
 */
+.search_wrapper {
+  position: relative;
+  width: 200px; /* Ширина блока поиска */
+}
+
+.search_content {
+  position: absolute;
+  top: -19px;
+  right: 0;
+  width: 40px; /* Ширина блока поиска */
+  height: 40px; /* Высота блока поиска */
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  transition: width 0.5s; /* Анимация ширины */
+  overflow: hidden; /* Скрыть содержимое, когда ширина меньше контента */
+}
+
+.search_content input {
+  width: calc(100% - 40px); /* Ширина поля поиска */
+  line-height: 31px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 10px;
+  float: right; /* Поле поиска расположено справа */
+  box-sizing: border-box;
+}
+
+.search_content .fa {
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 0.5s;
+  float: left; /* Иконка поиска расположена слева */
+}
+
+.search_wrapper:hover .search_content {
+  width: 200px; /* Ширина блока поиска при наведении */
+  cursor: pointer;
+}
+
+.search_wrapper:hover .search_content input {
+  display: block;
+}
+
+.search_wrapper:hover .search_content .fa {
+  background: #07051a;
+  color: white;
+}
+
+
+
+
 .d1 {
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
+    position: relative;
 }
 
 .d1 form{
@@ -444,6 +508,7 @@ h6 {
   background: #ffffff;
   color: #9E9C9C;
 }
+
 .d1 button {
   position: absolute; 
   width: 90px;
@@ -453,6 +518,7 @@ h6 {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+
 .d1 button:before {
   content: "\f002";
   font-family: FontAwesome;
@@ -460,78 +526,51 @@ h6 {
   color: #F9F0DA;
 }
 
-.search_content{
-    position: relative;
+
+
+
+.d1_view {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    transition: all 1s;
-    width: 40px;
-    height: 40px;
-    background: white;
-    box-sizing: border-box;
-    border-radius: 25px;
-    border: 4px solid white;
-    margin-left: 48px;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
-.search_content input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    line-height: 31px;
-    outline: 0;
-    border: 0;
-    display: none;
-    font-size: 1em;
-    border-radius: 20px;
-    padding: 0 10px;
+.d1_view form{
+    width: 305px;
+    margin-top: 28px;
+    margin-left: 214px;
 }
 
-.search_content .fa{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    color: #07051a;
-    text-align: center;
-    font-size: 1.2em;
-    transition: all 1s;
-    margin-top: -1px;
+.d1_view input {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border: 2px solid #a087f9;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background: #ffffff;
+  color: #9E9C9C;
 }
 
-.search_content:hover{
-    width: 200px;
-    cursor: pointer;
+.d1_view button {
+  position: absolute; 
+  width: 90px;
+  height: 50px;
+  border: none;
+  background: #a087f9;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
-.search_content:hover input{
-    display: block;
+.d1_view button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
 }
-
-.search_content:hover .fa{
-    background: #07051a;
-    color: white;
-}
-
-.expanded {
-    width: 200px !important; /* Убедитесь, что ваши стили здесь переопределяют стили :hover */
-    cursor: pointer;
-}
-
-.expanded input {
-    display: block;
-}
-
-.expanded .fa {
-    background: #07051a;
-    color: black;
-}
-
-
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -550,8 +589,28 @@ h6 {
   justify-content: space-between;
 }
 
+.image-content-view img{
+  width: 300px;
+  position: relative;
+  margin-top: 65px;
+}
+
+
 .text-content{
   margin-top: 210px;
+}
+
+.image-content-view img {
+  animation: moveUpDown 1s infinite alternate; /* Анимация будет длиться 1 секунду и повторяться бесконечно */
+}
+
+@keyframes moveUpDown {
+  from {
+    transform: translateY(1px); /* Начальное положение - нет смещения */
+  }
+  to {
+    transform: translateY(-10px); /* Конечное положение - смещение вверх на 2 пикселя */
+  }
 }
 
 
@@ -570,16 +629,17 @@ h6 {
 
 #hero_view {
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     background-size: cover;
     position: relative;
     margin-bottom: -25px;
 }
 
 
+
 #hero_view:before {
   content: "";
-  background: rgb(66 39 225 / 94%) linear-gradient(rgb(90 62 194) 0%, rgb(58 13 219) 5%, rgb(88 61 191) 40%, rgb(157 98 176 / 29%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
+  background: rgb(62 39 199) linear-gradient(rgb(78 53 171) 0%, rgb(83 54 180) 5%, rgb(81 54 178) 40%, rgb(157 98 176 / 29%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -609,15 +669,22 @@ h6 {
 
 #hero_view h1 {
   margin: 0;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 60px;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
-  margin-top: 45px;
+  margin-top: 100px;
+  position: relative;
+  margin-left: 209px;
 }
 
+.text-content-view{
+    display: flex;
+    
+
+}
 
 
 @media (max-width: 992px) {
@@ -1279,7 +1346,7 @@ aside .title_ {
       }
 
     .search_content{
-      display: none;
+      display: block;
     }
 
     .mobile-show-logo{
