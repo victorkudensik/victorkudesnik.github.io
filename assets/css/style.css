@@ -133,7 +133,7 @@ h6 {
 }
 
 .logo_color{
-  color: #d987e3;
+  color: #a087f9;
 }
 
 
@@ -148,7 +148,7 @@ h6 {
 }
 
 .mobile-show-logo-color-footer{
-  color: #d987e3;
+  color: #a087f9;
 }
 
 
@@ -215,7 +215,7 @@ h6 {
   height: 2px;
   bottom: -7px;
   left: 0;
-  background-color: #d987e3;
+  background-color: #a087f9;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -421,16 +421,24 @@ h6 {
 /**
 * Search content
 */
+.d1 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
 .d1 form{
-  width: 600px;
-  margin-top: 20px;
+    width: 305px;
+    margin-top: 28px;
+    margin-left: 214px;
 }
 
 .d1 input {
   width: 100%;
   height: 50px;
   padding-left: 10px;
-  border: 2px solid #d987e3;
+  border: 2px solid #a087f9;
   border-radius: 5px 0 0 5px;
   outline: none;
   background: #ffffff;
@@ -441,7 +449,7 @@ h6 {
   width: 90px;
   height: 50px;
   border: none;
-  background: #d987e3;
+  background: #a087f9;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
@@ -531,10 +539,33 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/1.jpg") top center;
+  /*background: url("../img/3.jpg") top center;*/
   background-size: cover;
   position: relative;
   margin-bottom: -25px;
+}
+
+.hero-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content{
+  margin-top: 210px;
+}
+
+
+.image-content img {
+  animation: moveUpDown 1s infinite alternate; /* Анимация будет длиться 1 секунду и повторяться бесконечно */
+}
+
+@keyframes moveUpDown {
+  from {
+    transform: translateY(1px); /* Начальное положение - нет смещения */
+  }
+  to {
+    transform: translateY(-10px); /* Конечное положение - смещение вверх на 2 пикселя */
+  }
 }
 
 #hero_view {
@@ -548,7 +579,7 @@ h6 {
 
 #hero_view:before {
   content: "";
-  background: rgba(21, 5, 23, 0.5) linear-gradient(rgb(26 0 33 / 50%) 0%, rgba(26, 0, 33, 0.5) 5%, rgb(136 89 151 / 98%) 40%, rgb(180 44 223 / 31%) 76%, rgb(137 84 137 / 88%) 94%, #92689b94 100%) repeat scroll 0% 0%;
+  background: rgb(66 39 225 / 94%) linear-gradient(rgb(90 62 194) 0%, rgb(58 13 219) 5%, rgb(88 61 191) 40%, rgb(157 98 176 / 29%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -597,7 +628,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(21, 5, 23, 0.5) linear-gradient(rgba(26, 0, 33, 0.5) 0%, rgba(26, 0, 33, 0.5) 5%, rgb(136 89 151 / 98%) 40%, rgb(157 98 176 / 29%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
+  background: rgb(62 39 199) linear-gradient(rgb(78 53 171) 0%, rgb(83 54 180) 5%, rgb(81 54 178) 40%, rgb(157 98 176 / 29%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -620,7 +651,7 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 60px;
   text-transform: uppercase;
@@ -632,6 +663,9 @@ h6 {
   color: #eee;
   margin: 15px 0 0 0;
   font-size: 24px;
+}
+.bi:hover{
+  background: #baa6ff;
 }
 
 #hero .btn-get-started {
@@ -646,11 +680,12 @@ h6 {
   margin-top: 30px;
   border: 2px solid #fff;
   color: #fff;
+  margin-right: 393px;
 }
 
 #hero .btn-get-started:hover {
-    background: #d987e394;
-    border: 2px solid #d987e394;
+    background: #b3a3ed;
+    border: 2px solid #b3a3ed;
 }
 
 @media (min-width: 1024px) {
@@ -699,7 +734,7 @@ h6 {
 
 
 .fly-in-button {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(100%);
   transition: opacity 1s ease, transform 2s ease;
 }
@@ -1088,7 +1123,7 @@ aside .title_ {
   right: 0;
   top: 0;
   bottom: 0;
-  background:rgb(21 5 23 / 71%) linear-gradient(rgb(26 0 33) 0%, rgb(26 0 33 / 0%) 5%, rgb(136 89 151 / 98%) 40%, rgb(157 98 176 / 45%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
+  background:rgb(62 39 199) linear-gradient(rgb(78 53 171) 0%, rgb(83 54 180) 5%, rgb(81 54 178) 40%, rgb(157 98 176 / 29%) 76%, rgb(88 72 93 / 36%) 94%, rgb(26 26 26 / 51%) 100%) repeat scroll 0% 0%;
   z-index: 1;
 }
 
@@ -1148,7 +1183,7 @@ aside .title_ {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #d987e3;
+  background: #a087f9;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1156,7 +1191,7 @@ aside .title_ {
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #d987e394;
+  background: #b3a3ed;
 }
 
 #footer .footer-top .social-links {
@@ -1224,10 +1259,24 @@ aside .title_ {
         display: block;
     }
 
+    #hero h1{
+      font-size: 23px;
+    }
+
     #header .logo a {
         font-size: 18px;
         text-transform: uppercase;
     }
+
+    .image-content img{
+        width: 250px;
+    }
+
+    .hero-content {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
 
     .search_content{
       display: none;
@@ -1246,7 +1295,7 @@ aside .title_ {
     }
 
     .mobile-show-logo-color-footer{
-      color: #d987e3;
+      color: #a087f9;
     }
 
     .logo_color {
@@ -1260,18 +1309,42 @@ aside .title_ {
     }
 
     .d1{
+      display: flex;
+      flex-wrap: wrap;
       margin-right: 89px;
-      width: 250px;
+      width: 100%;
+      position: absolute;
+      right: -44px;
       margin-top: 20px;
+    }
+    #hero .hero-container{
+      margin-bottom: 300px;
+    }
+
+    #hero .btn-get-started{
+      margin-left: -11px;
+    }
+
+    .hero-content{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .text-content{
+      margin-top: 35px;
+    }
+
+    .image-content{
+      display: flex;
     }
 
     .d1 form{
-      width: 100%;
       margin: 0 auto;
     }
 
     .d1 input{
       height: 45px;
+      width: 80%;
     }
 
     .d1 button{
