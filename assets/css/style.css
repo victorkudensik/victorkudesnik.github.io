@@ -425,108 +425,76 @@ h6 {
 /**
 * Search content
 */
-.search_wrapper {
-  position: relative;
-  width: 200px; /* Ширина блока поиска */
+.d3 {
+ 
 }
 
-.search_content {
+.d3 form {
+  background: #fffff;
+
+}
+
+.d3 input, .d3 button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.d3 input {
+  width: 100%;
+  height: 40px;
+  padding-left: 15px;
+}
+
+.d3 button {
+  height: 40px;
+  width: 40px;
   position: absolute;
-  top: -19px;
   right: 0;
-  width: 40px; /* Ширина блока поиска */
-  height: 40px; /* Высота блока поиска */
-  background: white;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 4px solid white;
-  transition: width 0.5s; /* Анимация ширины */
-  overflow: hidden; /* Скрыть содержимое, когда ширина меньше контента */
-}
-
-.search_content input {
-  width: calc(100% - 40px); /* Ширина поля поиска */
-  line-height: 31px;
-  outline: 0;
-  border: 0;
-  display: none;
-  font-size: 1em;
-  border-radius: 0;
-  padding: 0 10px;
-  float: right; /* Поле поиска расположено справа */
-  box-sizing: border-box;
-}
-
-.search_content .fa {
-  padding: 8px;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  font-size: 1.2em;
-  transition: all 0.5s;
-  float: left; /* Иконка поиска расположена слева */
-}
-
-.search_wrapper:hover .search_content {
-  width: 320px; /* Ширина блока поиска при наведении */
   cursor: pointer;
+  
 }
 
-.search_wrapper:hover .search_content input {
-  display: block;
+.d3 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 20px;
+  padding-right: 10px;
+  color: #020202;
 }
 
-.search_wrapper:hover .search_content .fa {
-  background: #07051a;
-  color: white;
+.d3{
+  display: none;
 }
 
-
-
-
-.d1 {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    position: relative;
-}
-
-.d1 form{
-    width: 305px;
-    margin-top: 28px;
-    margin-left: 214px;
-}
 
 .d1 input {
-  width: 100%;
-  height: 50px;
+  width: 250px;
+  height: 42px;
   padding-left: 10px;
-  border: 2px solid #a087f9;
-  border-radius: 5px 0 0 5px;
+  border: 2px solid #fff;
+  border-radius: 5px;
   outline: none;
-  background: #ffffff;
+  background: #fff;
   color: #9E9C9C;
 }
-
 .d1 button {
   position: absolute; 
-  width: 90px;
-  height: 50px;
+  right: 0px;
+  width: 42px;
+  height: 42px;
   border: none;
   background: #a087f9;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+  margin-right: 10px;
 }
-
 .d1 button:before {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 16px;
   color: #F9F0DA;
 }
-
-
 
 
 .d1_view {
@@ -1330,11 +1298,20 @@ aside .title_ {
 
     #hero h1{
       font-size: 23px;
+      text-align: left;
     }
 
     #header .logo a {
         font-size: 18px;
         text-transform: uppercase;
+    }
+
+    .d3{
+      display: block;
+    }
+
+    .d1{
+      display: none;
     }
 
     #hero .hero-container{
@@ -1356,8 +1333,9 @@ aside .title_ {
       flex-direction: column-reverse;
     }
 
-    .text-content{
+    .hero_title h1{
       margin-top: 35px;
+      text-align: left;
     }
 
     .image-content{
@@ -1404,15 +1382,7 @@ aside .title_ {
       justify-content: space-between;
     }
 
-    .d1{
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: 89px;
-      width: 100%;
-      position: absolute;
-      right: -44px;
-      margin-top: 20px;
-    }
+    
     #hero .hero-container{
       margin-bottom: 135px;
     }
@@ -1443,9 +1413,7 @@ aside .title_ {
       height: 45px;
     }
 
-    form{
-        margin-right: 5px;
-    }
+    
     
     .container_{
         flex-wrap: wrap;
