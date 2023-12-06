@@ -425,29 +425,97 @@ h6 {
 /**
 * Search content
 */
-
-
-
-
-.d1 form {
-  background: #A3D0C3;
+.search_wrapper {
+  position: relative;
+  width: 200px; /* Ширина блока поиска */
 }
-.d1 input, .d1 button {
-  border: none;
-  outline: none;
-  background: transparent;
+
+.search_content {
+  position: absolute;
+  top: -19px;
+  right: 0;
+  width: 40px; /* Ширина блока поиска */
+  height: 40px; /* Высота блока поиска */
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  transition: width 0.5s; /* Анимация ширины */
+  overflow: hidden; /* Скрыть содержимое, когда ширина меньше контента */
 }
+
+.search_content input {
+  width: calc(100% - 40px); /* Ширина поля поиска */
+  line-height: 31px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 10px;
+  float: right; /* Поле поиска расположено справа */
+  box-sizing: border-box;
+}
+
+.search_content .fa {
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 0.5s;
+  float: left; /* Иконка поиска расположена слева */
+}
+
+.search_wrapper:hover .search_content {
+  width: 200px; /* Ширина блока поиска при наведении */
+  cursor: pointer;
+}
+
+.search_wrapper:hover .search_content input {
+  display: block;
+}
+
+.search_wrapper:hover .search_content .fa {
+  background: #07051a;
+  color: white;
+}
+
+
+
+
+.d1 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.d1 form{
+    width: 305px;
+    margin-top: 28px;
+    margin-left: 214px;
+}
+
 .d1 input {
   width: 100%;
-  height: 42px;
-  padding-left: 15px;
+  height: 50px;
+  padding-left: 10px;
+  border: 2px solid #a087f9;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background: #ffffff;
+  color: #9E9C9C;
 }
+
 .d1 button {
-  height: 42px;
-  width: 42px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: absolute; 
+  width: 90px;
+  height: 50px;
+  border: none;
+  background: #a087f9;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
@@ -663,9 +731,7 @@ h6 {
   margin: 15px 0 0 0;
   font-size: 24px;
 }
-.bi:hover{
-  background: #baa6ff;
-}
+
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
@@ -1252,23 +1318,10 @@ aside .title_ {
 
 @media (max-width: 760px) {
 
-    #header.fixed-top {
-      height: 130px;
-    }
-
     #header .logo{
-        position: absolute;
-        top: 15px;
-        left: 22px;
+        margin-bottom: 6px;
         text-transform: uppercase;
         display: block;
-    }
-
-    .mobile-nav-toggle {
-      display: block;
-      position: absolute;
-      top: -49px;
-      left: 325px;
     }
 
     #hero h1{
@@ -1278,75 +1331,6 @@ aside .title_ {
     #header .logo a {
         font-size: 18px;
         text-transform: uppercase;
-    }
-
-    .image-content img{
-        width: 250px;
-    }
-
-    .hero-content {
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-    .search_content{
-      display: block;
-    }
-
-
-    .mobile-show-logo{
-      display: block;
-    }
-
-    .mobile-show-logo-color{
-      color: #d987e3;
-    }
-
-    .mobile-show-logo-footer{
-      display: block;
-    }
-
-    .mobile-show-logo-color-footer{
-      color: #a087f9;
-    }
-
-    .logo_color {
-      font-size: 18px;
-    }
-
-    .d-flex {
-      display: flex!important;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .d1{
-      display: block;
-      position: absolute;
-      display: block;
-      width: 90%;
-      top: 63px;
-      left: 21px;
-      border: 1px solid black;
-    }
-
-
-    .d1 input {
-
-    border: 0px solid black;
-    border-radius: 0px;
-    outline: none;
-    background: #fff;
-    color: #9E9C9C;
-    }
-
-    .d1 button {
-
-    border: 0px solid black;
-    background: #fff;
-    border-radius: 0;
-    cursor: pointer;
     }
 
     #hero .hero-container{
@@ -1376,6 +1360,84 @@ aside .title_ {
       display: flex;
     }
 
+    .image-content img{
+        width: 250px;
+    }
+
+    .hero-content {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+    .search_content{
+      display: block;
+    }
+
+    .mobile-show-logo{
+      display: block;
+    }
+
+    .mobile-show-logo-color{
+      color: #d987e3;
+    }
+
+    .mobile-show-logo-footer{
+      display: block;
+    }
+
+    .mobile-show-logo-color-footer{
+      color: #a087f9;
+    }
+
+    .logo_color {
+      font-size: 18px;
+    }
+
+    .d-flex {
+      display: flex!important;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .d1{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 89px;
+      width: 100%;
+      position: absolute;
+      right: -44px;
+      margin-top: 20px;
+    }
+    #hero .hero-container{
+      margin-bottom: 135px;
+    }
+
+    .hero-content{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .text-content{
+      margin-top: 35px;
+    }
+
+    .image-content{
+      display: flex;
+    }
+
+    .d1 form{
+      margin: 0 auto;
+    }
+
+    .d1 input{
+      height: 45px;
+      width: 80%;
+    }
+
+    .d1 button{
+      height: 45px;
+    }
 
     form{
         margin-right: 5px;
