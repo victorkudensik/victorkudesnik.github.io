@@ -426,7 +426,9 @@ h6 {
 * Search content
 */
 
-
+.hide_search{
+  display: none;
+}
 
 .d3 form {
   background: #fffff;
@@ -440,9 +442,14 @@ h6 {
 }
 
 .d3 input {
-  width: 100%;
-  height: 40px;
-  
+  width: 305px;
+  height: 40px; 
+  padding: 15px;
+}
+
+.form_search{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .d3 button {
@@ -450,8 +457,8 @@ h6 {
   width: 40px;
   position: absolute;
   cursor: pointer;
-
-  
+  background: white;
+  border-radius:0px 4px 4px 0px;
 }
 
 .d3 button:before {
@@ -1288,11 +1295,35 @@ aside .title_ {
         margin-bottom: 6px;
         text-transform: uppercase;
         display: block;
+        margin-right: 150px;
     }
 
     .mobile-nav-toggle{
-      margin-left: 15px;
+     
     }
+
+    .btn-secondary{
+      background: #443745;
+      border: none;
+    }
+    .btn:first-child:active{
+      background: #443745;
+      border: none;
+    }
+
+    .btn:hover{
+      background: #443745;
+      border: none;
+    }
+
+    .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+      position: relative;
+    }
+
+    .hide_search{
+      display: block;
+    }
+
 
     #hero h1{
       font-size: 23px;
@@ -1375,9 +1406,12 @@ aside .title_ {
     }
 
     .d-flex {
-      display: flex!important;
-      flex-direction: row;
-      justify-content: space-between;
+          display: flex!important;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: baseline;
     }
 
     
@@ -1411,7 +1445,9 @@ aside .title_ {
       height: 45px;
     }
 
-    
+    .dropdown{
+      display: block;
+    }
     
     .container_{
         flex-wrap: wrap;
